@@ -1,0 +1,208 @@
+/*
+Font Families:
+font-family: 'Pacifico', cursive;
+subheading text: font-family: 'Lobster Two', cursive;
+main title h1: font-family: 'Shrikhand', cursive;
+content text: font-family: 'Quicksand', sans-serif;
+*/
+
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #336699;
+      }
+
+      #map {
+        height: 100%;
+        margin: 15px;
+        border: 1px solid #eee;
+        float: left;
+      }
+
+      header {
+        background-image: url('../images/floral-background.jpg');
+        text-align: center;
+        margin: 15px;
+        padding: 10px 0;
+        border: 4px solid #bb0000;
+        border-radius: 10px;
+      }
+
+      header h1 {
+        font-family: 'Shrikhand', cursive;
+        font-size: 60px;
+        color: #cc0000;
+        text-shadow: -2px -2px 0px rgba(255,255,255,0.8), 2px 2px 0px rgba(0,0,0,0.8);
+        background-color: white;
+
+      }
+
+      header h4 {
+        font-family: 'Lobster Two', cursive;
+        font-size: 20px;
+        color: #cc0000;
+        text-shadow: -.5px -.5px 0px rgba(255,255,255,0.8), .5px .5px 0px rgba(0,0,0,0.8);
+
+      }
+
+      h3 {
+        font-family: 'Pacifico', cursive;
+        font-size: 28px;
+        color: #cc0000;
+        text-shadow: -1px -1px 0px rgba(255,255,255,0.7), 1px 1px 0px rgba(0,0,0,0.8);
+        background-color: white;
+        padding: 5px 0;
+      }
+
+
+      .content_block {
+        border: 4px solid #bb0000;
+        border-radius: 10px;
+        background-image: url('../images/floral-background.jpg');
+      }
+
+      .main-image {
+        border: 4px solid #bb0000;
+        border-radius: 10px;
+        margin: 15px;
+      }
+
+      .form-container {
+        background-color: white;
+        padding: 5px 10px;
+      }
+
+      .make-reservation {
+        text-align: center;
+        padding: 25px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+
+      .confirm-container {
+        padding: 0 15px;
+      }
+
+      .confirm-button {
+        width: 100%;
+        font-weight: bold;
+      }
+
+      .confirm-button:hover {
+        background-color: #336699;
+        color: white;
+      }
+
+      .reservations label {
+        font-size: 16px;
+      }
+
+      .existing-reservations {
+        text-align: center;
+        padding: 25px 25px 30px 25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .reservations-table {
+        width: 100%;
+        background-color: white;
+      }
+
+      .existing-reservations th {
+        border: 1px solid black;
+        text-align: center;
+        padding: 2px;
+      }
+
+      .existing-reservations td {
+        border: 1px solid black;
+        text-align: left;
+        padding: 2px;
+
+      }
+
+      .welcome-section-content {
+        margin: 15px;
+        padding: 25px;
+        float: left;
+      }
+
+      .welcome-section-content h3 {
+        text-align: center;
+      }
+
+      .welcome-text {
+        background-color: white;
+        padding: 5px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .customer-reviews {
+        padding: 15px;
+      }
+
+      .customer-reviews-content {
+        margin-top: 15px;
+        float: left;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .customer-reviews-content h3 {
+        text-align: center;
+      }
+
+      .review-image {
+        margin: 20px 0;
+
+      }
+
+      .review-section {
+        margin: 20px 0;
+        background-color: white;
+        padding: 5px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .review-author {
+        text-align: right;
+      }
+
+      #map {
+        height: 100%;
+        display: block;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 800px) {
+        header h1 {
+          font-size: 50px;
+        }
+
+        header h4 {
+          font-size: 16px;
+        }
+
+
+      }
+
+      @media screen and (max-width: 540px) {
+        header h1 {
+          font-size: 40px;
+        }
+
+        header h4 {
+          font-size: 12px;
+        }
+
+        h3 {
+          font-size: 20px;
+        }
+      }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Reservations App</title>
+  <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Pacifico|Quicksand|Shrikhand" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Monk&rsquo;s Caf&eacute;</h1>
+    <h4>&quot;The Coffee Shop&quot;</h4>
+  </header>
+
+  <section class="main-image">
+    <img src="images/toms-restaurant.jpg" alt="Tom's Restaurant" class="img-responsive">
+  </section>
+
+  <section class="reservations">
+    <div class="col-sm-6">
+      <div class="make-reservation content_block">
+        <h3>Make a Reservation</h3>
+
+        <form class="form-horizontal form-container">
+          <div class="form-group">
+            <label for="Name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Day" class="col-sm-2 control-label">Day</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="day">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 confirm-container">
+              <button type="submit" class="btn btn-default confirm-button">Confirm</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="existing-reservations content_block">
+        <h3>Existing Reservations</h3>
+
+        <table class="reservations-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Day</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bob</td>
+              <td>10/10/2016</td>
+            </tr>
+            <tr>
+              <td>Nancy</td>
+              <td>10/2/2016</td>
+            </tr>
+            <tr>
+              <td>Steve</td>
+              <td>10/7/2016</td>
+            </tr>
+            <tr>
+              <td>Manny</td>
+              <td>10/20/2016</td>
+            </tr>
+            <tr>
+              <td>Brenda</td>
+              <td>11/3/2016</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="welcome-section">
+
+      <div class="welcome-section-content content_block">
+
+          <h3>Come Dine with Us!</h3>
+          <div class="welcome-text">
+            <p>Come to Monk&rsquo;s and dine in the comfort of authentic ingredients
+              freshly made without artificial preservatives.
+              Delicious dishes that will have you salivating with desire and craving more!</p>
+            <p>We are located in Upper Manhattan, just down the street from Columbia University and the 110th street subway station.</p>
+          </div>
+      </div>
+  </section>
+
+  <div id="map"></div>
+
+  <section class="customer-reviews">
+
+    <div class="customer-reviews-content content_block">
+      <h3>Customer Reviews</h3>
+      <div class="col-sm-6">
+        <div class="review-image">
+          <img src="images/jerry.jpg" alt="Jerry Seinfeld and George Costanza" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="review-section">
+          <p id="review" class="review">&quot;Big lettuce, big carrots, tomatoes like volleyballs.&quot;</p>
+          <p class="review-author">- Jerry Seinfeld</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAOXFXDxilpF4uTeIc0s9d30wrEGxsmT5g&callback=initMap" async defer ></script>
+</body>
