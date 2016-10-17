@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Restaurant Reservations App</title>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Pacifico|Quicksand|Shrikhand" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="css/jquery-ui.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <script>
+  $(function() {
+    $('.datepicker').datepicker();
+  });
+  </script>
 </head>
 <body>
 
@@ -18,22 +26,58 @@
     <img src="images/toms-restaurant.jpg" alt="Tom's Restaurant" class="img-responsive">
   </section>
 
+  <section class="hours-of-operation">
+      <div class="hours-of-operation-content content_block">
+          <h3>Hours of Operation</h3>
+          <div class="hours-table">
+                <h4 id="open_or_closed"></h4>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Day</th>
+                      <th>Times</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Monday - Friday:</td>
+                      <td>6:00AM - 9:00PM</td>
+                    </tr>
+                    <tr>
+                      <td>Saturday &amp; Sunday:</td>
+                      <td>8:00AM - 6:00PM</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+      </div>
+  </section>
+
   <section class="reservations">
     <div class="col-sm-6">
       <div class="make-reservation content_block">
         <h3>Make a Reservation</h3>
 
-        <form class="form-horizontal form-container">
+        <form id="reservation-form" class="form-horizontal form-container">
           <div class="form-group">
             <label for="Name" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="name">
+              <input placeholder="Last Name" type="text" class="form-control" id="name">
+              <p class="error">Invalid input. Only alphanumeric characters accepted.</p>
             </div>
           </div>
           <div class="form-group">
             <label for="Day" class="col-sm-2 control-label">Day</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="day">
+              <input placeholder="mm/dd/yyyy" type="text" class="datepicker form-control" id="day">
+              <p class="error">Invalid input. Date must be in the format: mm/dd/yyyy.</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Time" class="col-sm-2 control-label">Time</label>
+            <div class="col-sm-10">
+              <input placeholder="12:00PM" type="text" class="form-control" id="time">
+              <p class="error">Invalid input. Time must be in the format: 12:00PM.</p>
             </div>
           </div>
           <div class="form-group">
@@ -54,33 +98,22 @@
             <tr>
               <th>Name</th>
               <th>Day</th>
+              <th>Time</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Bob</td>
-              <td>10/10/2016</td>
-            </tr>
-            <tr>
-              <td>Nancy</td>
-              <td>10/2/2016</td>
-            </tr>
-            <tr>
-              <td>Steve</td>
-              <td>10/7/2016</td>
-            </tr>
-            <tr>
-              <td>Manny</td>
-              <td>10/20/2016</td>
-            </tr>
-            <tr>
-              <td>Brenda</td>
-              <td>11/3/2016</td>
-            </tr>
-          </tbody>
+          <tbody id="reservations-data"></tbody>
         </table>
       </div>
     </div>
+
+    <script id="reservations-template" type="text/x-handlebars-template">
+        <tr data-id="{{reservationId}}">
+          <td>{{name}}</td>
+          <td>{{day}}</td>
+          <td>{{time}}</td>
+        </tr>
+    </script>
+
   </section>
 
   <section class="welcome-section">
@@ -116,9 +149,12 @@
       </div>
     </div>
   </section>
-
-  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js"></script>
+  <script src="timepicker/src/wickedpicker.js"></script>
+  <script src=”https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js”></script>
+  <script src="js/handlebars-v4.0.5.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/hours-of-operation.js"></script>
 
   <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAOXFXDxilpF4uTeIc0s9d30wrEGxsmT5g&callback=initMap" async defer ></script>
 </body>
